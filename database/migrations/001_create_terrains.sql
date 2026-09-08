@@ -1,0 +1,8 @@
+CREATE TABLE terrains (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(255) NOT NULL,
+    description TEXT,
+    tarif_horaire DECIMAL(8,2) NOT NULL,
+    actif BOOLEAN NOT NULL DEFAULT TRUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
