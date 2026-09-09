@@ -1,8 +1,9 @@
 CREATE TABLE terrains (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(255) NOT NULL,
-    description TEXT,
+    nom VARCHAR(100) NOT NULL,
+    sport VARCHAR(50) NOT NULL,
     tarif_horaire DECIMAL(8,2) NOT NULL,
     actif BOOLEAN NOT NULL DEFAULT TRUE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
