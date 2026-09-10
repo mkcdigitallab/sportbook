@@ -9,7 +9,7 @@ use Dotenv\Dotenv;
 
 $dotenv = Dotenv::createImmutable(__DIR__ . '/..');
 
-$dotenv->load();
+$dotenv->safeLoad();
 
 $database = require_once dirname(__DIR__) . '/config/database.php';
 $database([
