@@ -69,6 +69,15 @@ case "$1" in
         docker exec -it sportbook-app php database/seed.php
         echo "✅ Données insérées avec succès."
         ;;
+    php-version)
+        echo "🐘 Version PHP du conteneur :"
+        docker exec -it sportbook-app php -v
+        ;;
+
+    php-modules)
+        echo "🧩 Modules PHP du conteneur :"
+        docker exec -it sportbook-app php -m | grep -E 'PDO|pdo_mysql'
+        ;;
 
     status)
         docker compose ps
